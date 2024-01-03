@@ -1,39 +1,46 @@
 <!DOCTYPE html>
-
-
+<html lang="fr">
 <head>
-    <img="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langage de programmation</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
-
-
 <body>
+    <a onmousemove="random(this.id)" id="TEXT">slt</a>
+
+    </a>
+    <div class="python">
+        <a href="./langue/python.html"><img src="./img/python.png" alt=""></a>
+    </div>
     <div class="js">
-        <script>function redirect(url){window.location.href = url}</script>
+        <a href="./langue/js.html"><img src="./img/js.png" alt=""></a>
     </div>
-
-    <div class="blocnav">
-
-    <button class="navigate" onclick="redirect('./html/python.html')">
-        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
-    </button>
-
-    <button class="navigate" onclick="redirect('./html/javascript.html')">
-        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
-    </button>
-
-    <button class="navigate" onclick="redirect('./html/lua.html')">
-        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png">
-    </button>
-
-    <button class="navigate" onclick="redirect('./html/coffeescript.html')">
-        <img class="img" src="https://th.bing.com/th/id/OIP.qysHIzxU7ciOCC_mox5imQHaHa?pid=ImgDet&rs=1">
-    </button>
-
-    <button class='navigate' onclick="redirect('./html/ruby.html')">
-        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1200px-Ruby_logo.svg.png">
-    </button>
-
+    <div class="html">
+        <a href="./langue/html.html"><img src="./img/html.png" alt=""></a>
     </div>
+    <div class="cpp">
+        <a href="./langue/cpp.html"><img src="./img/cpp.png" alt=""></a>
+    </div>
+    <div class="rust">
+        <a href="./langue/rust.html"><img src="./img/rust.png" alt=""></a>
+        
+    </div>
+    <a id="timer" onclick="timing(this.id)" type="">Quel heure est-il ?</a>
+    <script>
+        async function timing(object){
+            document.getElementById(object).innerHTML = Date.now() +" sois le "+new Date().toLocaleString()
+        }
+    </script>
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        async function random(object){
+            const list = ["slt","cv","bonjour","Non","Encore","Oui","Non","bye"]
+            document.getElementById(object).innerHTML = list[Math.floor(Math.random() * (list.length -1))]
+        }
+    </script>
+
 </body>
+</html>
